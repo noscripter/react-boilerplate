@@ -6,18 +6,26 @@
   "dependencies": {
     "react": "~0.8",
     "statics-stylesheets": "~0.0.1",
-    "stylesheets": "~0.0.3"
+    "stylesheets": "~0.0.3",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "jsxc": "~0.1.6"
   },
   "scripts": {
     "start": "jsxc --watch src/ lib/",
-    "build": "jsxc src/ lib/"
+    "build": "jsxc src/ lib/",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
-  "files": ["lib/", "USAGE.txt", "static/"],
+  "files": [
+    "lib/",
+    "USAGE.txt",
+    "static/"
+  ],
   "staticRoot": "./static/",
   "staticPlugin": "statics-stylesheets",
   "author": "Pete Hunt",
-  "license": "Apache 2"
+  "license": "Apache 2",
+  "snyk": true
 }
